@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Fetching External Data</title>
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body lang="en" id="body">
+<header id="header">
+    <nav>
+        <a href="#" id="logo"></a>
+        <label for="toggle">&#9776;</label>
+        <input type="checkbox" id="toggle"/>
+        <ul id="links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">My List</a></li>
+            <li><a href="#">New Releases</a></li>
+        </ul>
+    </nav>
+
+    <div>
+        <form id = "search-form">
+            <p id="searchLabel"><label for="searchbar">Search for your favorite Comics</label></p>
+            <p id="search"><input type="text" id="searchbar" placeholder="ex: Gun Theory" autocomplete="off"></p>
+            <p><label for="searchButton"></label></p>
+            <input id="searchButton" type="submit" value="Search">
+        </form>
+    </div>
+
+</header>
+
+<section id="results">
+    <h2 id="results-of-search"></h2>
+    <ul id="comicList">
+        <!-- comics -->
+    </ul>
+    <input id="load" type="button" value="Show More"/>
+</section>
+
+<footer>
+    <p>Built by Trevor Molano for DW2</p>
+</footer>
+
+<script src="js/index.js"></script>
+
+
+</body>
+
+</html>

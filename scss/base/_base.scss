@@ -1,0 +1,111 @@
+//HTML global elements
+
+body {
+  background-color: #e23636;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}
+
+header {
+  background: url("../search-assets/header.png") no-repeat;
+  background-size: 100%;
+  overflow: auto;
+  transition: linear 1s 1s;
+  height: 20rem;
+
+  @include nav(mobile){
+    height: 14rem;
+  }
+  @include nav(tablet){
+    height: 22rem;
+  }
+}
+
+img {
+  height: 20rem;
+  width: 100%;
+  @include nav(mobile){
+    height: 7rem;
+    width: 30%;
+  }
+  @include nav(tablet){
+    height: 15rem;
+  }
+}
+
+footer{
+  background: black;
+  color: gold;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+
+  p{
+    display: inline-block;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: gold;
+}
+
+div {
+  clear: both;
+  margin: $margin;
+  width: 25%;
+  @include nav(mobile){
+    width: 35%;
+  }
+  @include nav(tablet){
+    width: 25%;
+  }
+
+  p{
+    margin: 0;
+  }
+}
+
+nav {
+  overflow: auto;
+
+
+  input {
+    display: none;
+
+  }
+
+  label {
+    display: none;
+    @include nav(mobile){
+      float: right;
+      display: block;
+      margin: 0 5% 0 0;
+    }
+  };
+
+  ul {
+    @include content(flex, flex-end, 20%, 0.5rem, none);
+    margin-right: 1rem;
+    font-family: $font;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: space-between;
+    float: right;
+
+    @include nav(mobile) {
+      display: none;
+      font-size: 0.7rem;
+    }
+    @include nav(tablet){
+      font-size: 0.8rem;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+  }
+
+}

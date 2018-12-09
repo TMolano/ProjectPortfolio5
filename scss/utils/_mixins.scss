@@ -1,0 +1,23 @@
+//similiar attributes for content elements
+@mixin content($display, $align-content, $width, $padding, $list-style){
+  display: $display;
+  align-content: $align-content;
+  width: $width;
+  padding: $padding;
+  list-style: $list-style;
+}
+
+@mixin nav($displayNav){
+  @if $displayNav == mobile {
+    @media(min-width: 320px) and (max-width: 700px){@content;}
+  }
+  @else if $displayNav == tablet {
+    @media (min-width: 701px) and (max-width: 1159px){@content;}
+  }
+  @else if $displayNav == pc {
+    @media (min-width: 1160px) and (max-width: 1440px){@content;}
+  }
+
+}
+
+
