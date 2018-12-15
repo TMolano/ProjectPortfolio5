@@ -1,3 +1,4 @@
+
 #search {
   width: 100%;
   height: 100%;
@@ -16,16 +17,15 @@
 }
 
 #searchLabel {
-  display: inline-block;
+  text-align: center;
   box-sizing: border-box;
-  margin-top: 15%;
   padding: 0.2em;
   background: gold;
   color: $font-color;
   font-family: $font;
   font-size: 0.875rem;
   @include nav(mobile){
-    font-size: 0.7rem;
+    font-size: .2rem;
     margin-top: 0;
   }
 }
@@ -50,4 +50,20 @@
   display: none;
   transition: ease-in 0.50s;
 
+}
+
+#loader {
+  display: none;
+  border: 1rem solid #f3f3f3; /* Light grey */
+  border-top: 1rem solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

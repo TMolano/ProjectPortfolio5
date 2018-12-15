@@ -20,9 +20,8 @@
         background-size: .8rem; } }
 
 #searchLabel {
-  display: inline-block;
+  text-align: center;
   box-sizing: border-box;
-  margin-top: 15%;
   padding: 0.2em;
   background: gold;
   color: black;
@@ -30,7 +29,7 @@
   font-size: 0.875rem; }
   @media (min-width: 320px) and (max-width: 700px) {
     #searchLabel {
-      font-size: 0.7rem;
+      font-size: .2rem;
       margin-top: 0; } }
 
 #searchButton {
@@ -48,18 +47,38 @@
   display: none;
   transition: ease-in 0.50s; }
 
+#loader {
+  display: none;
+  border: 1rem solid #f3f3f3;
+  /* Light grey */
+  border-top: 1rem solid #3498db;
+  /* Blue */
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem; }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
 #results {
   margin: 0 auto;
   width: 90%; }
   #results h3 {
     color: black;
     font-family: "Arial Rounded MT Bold", Arial, serif;
-    font-size: 14px; }
+    font-size: 14px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem; }
     @media (min-width: 320px) and (max-width: 700px) {
       #results h3 {
-        float: right;
-        font-size: 1rem;
-        width: 68%; } }
+        font-size: .5rem;
+        width: 60%;
+        float: left; } }
     @media (min-width: 1160px) and (max-width: 1440px) {
       #results h3 {
         padding-left: 0.5rem;
@@ -68,12 +87,21 @@
 .comicItem {
   width: 30%;
   background: gold;
+  border: 1px solid black;
   height: 28rem;
-  margin: 1rem; }
+  margin: 0 auto;
+  margin-bottom: 1rem; }
   @media (min-width: 320px) and (max-width: 700px) {
     .comicItem {
       height: 7rem;
-      width: 100%; } }
+      width: 100%;
+      margin: 0.5rem; } }
+  @media (min-width: 701px) and (max-width: 1159px) {
+    .comicItem {
+      height: 28rem;
+      margin: 0 auto; } }
+  .comicItem button {
+    margin-left: .5rem; }
 
 #comicList {
   display: flex;
@@ -83,9 +111,6 @@
   list-style: none;
   flex-wrap: wrap;
   margin: 0 auto; }
-  @media (min-width: 320px) and (max-width: 700px) {
-    #comicList li {
-      margin: 0.5rem; } }
 
 #logo {
   background: url("../search-assets/marvel_logo.jpg") no-repeat;
@@ -120,7 +145,7 @@ header {
       height: 14rem; } }
   @media (min-width: 701px) and (max-width: 1159px) {
     header {
-      height: 22rem; } }
+      height: 14rem; } }
 
 img {
   height: 20rem;
@@ -128,7 +153,8 @@ img {
   @media (min-width: 320px) and (max-width: 700px) {
     img {
       height: 7rem;
-      width: 30%; } }
+      width: 30%;
+      float: left; } }
   @media (min-width: 701px) and (max-width: 1159px) {
     img {
       height: 15rem; } }
@@ -152,10 +178,10 @@ div {
   width: 25%; }
   @media (min-width: 320px) and (max-width: 700px) {
     div {
-      width: 35%; } }
+      width: 45%; } }
   @media (min-width: 701px) and (max-width: 1159px) {
     div {
-      width: 25%; } }
+      width: 35%; } }
   div p {
     margin: 0; }
 
@@ -184,9 +210,11 @@ nav {
     @media (min-width: 320px) and (max-width: 700px) {
       nav ul {
         display: none;
-        font-size: 0.7rem; } }
+        font-size: 0.7rem;
+        width: 30%; } }
     @media (min-width: 701px) and (max-width: 1159px) {
       nav ul {
-        font-size: 0.8rem; } }
+        font-size: 0.8rem;
+        width: 30%; } }
     nav ul a {
       text-decoration: none; }

@@ -6,10 +6,13 @@
     color: $font-color;
     font-family: $font;
     font-size: $font-size;
+     padding-left: 0.5rem;
+     padding-right: 0.5rem;
+
      @include nav(mobile){
-       float: right;
-       font-size: 1rem;
-       width: 68%;
+       font-size: .5rem;
+       width: 60%;
+       float: left;
 
      }
      @include nav(pc){
@@ -23,11 +26,23 @@
 .comicItem {
   width: 30%;
   background: gold;
+  border: 1px solid black;
   height: 28rem;
-  margin: 1rem;
+  margin: $margin;
+  margin-bottom: 1rem;
   @include nav(mobile){
     height: 7rem;
     width: 100%;
+    margin: 0.5rem;
+  }
+  @include nav(tablet){
+    height: 28rem;
+    margin: 0 auto;
+  }
+
+  button{
+    margin-left: .5rem;
+
   }
 }
 
@@ -36,12 +51,6 @@
   @include content(flex, flex-start, 95%, 0, none);
   flex-wrap: wrap;
   margin: $margin;
-
-  @include nav(mobile) {
-    li {
-      margin: 0.5rem;
-    }
-  }
 }
 
 #logo {

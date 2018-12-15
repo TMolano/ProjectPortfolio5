@@ -19,7 +19,7 @@ header {
     height: 14rem;
   }
   @include nav(tablet){
-    height: 22rem;
+    height: 14rem;
   }
 }
 
@@ -29,6 +29,7 @@ img {
   @include nav(mobile){
     height: 7rem;
     width: 30%;
+    float: left;
   }
   @include nav(tablet){
     height: 15rem;
@@ -57,10 +58,10 @@ div {
   margin: $margin;
   width: 25%;
   @include nav(mobile){
-    width: 35%;
+  width: 45%;
   }
   @include nav(tablet){
-    width: 25%;
+    width: 35%;
   }
 
   p{
@@ -97,9 +98,11 @@ nav {
     @include nav(mobile) {
       display: none;
       font-size: 0.7rem;
+      width: 30%;
     }
     @include nav(tablet){
       font-size: 0.8rem;
+      width: 30%;
     }
 
     a {
